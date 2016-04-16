@@ -44,6 +44,11 @@ angular
         controller: 'MessageCtrl',
         controllerAs: 'message'
       })
+      .when('/button', {
+        templateUrl: 'views/button.html',
+        controller: 'ButtonCtrl',
+        controllerAs: 'button'
+      })
       .otherwise({
         redirectTo: '/'
       });

@@ -334,7 +334,7 @@
       <workItem from="1461119247567" duration="7044000" />
       <workItem from="1461205612588" duration="1198000" />
       <workItem from="1461291244884" duration="598000" />
-      <workItem from="1471662933817" duration="11167000" />
+      <workItem from="1471662933817" duration="11552000" />
     </task>
     <task id="LOCAL-00001" summary="modify ignore files">
       <created>1461033343325</created>
@@ -347,7 +347,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41537000" />
+    <option name="totallyTimeSpent" value="41922000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">

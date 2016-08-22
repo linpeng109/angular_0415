@@ -1,6 +1,24 @@
 <p>This is the list view.</p>
-<ul class="example-animate-container">
-  <li class="animate-repeat" ng-repeat="user in users">
-    [{{$index + 1}}] {{user.userName}} /{{user.passWord}} /user.department
-  </li>
-</ul>
+<table st-table="rowCollection" class="table">
+  <thead>
+  <tr>
+    <th st-sort="_id">标识</th>
+    <th st-sort="userName">用户名</th>
+    <th st-sort="department">部门</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr st-select-row="row" st-select-mode="multiple" ng-repeat="user in users">
+    <td>{{user._id | uppercase}}</td>
+    <td>{{user.userName|uppercase}}</td>
+    <td>{{user.department | uppercase}}</td>
+  </tr>
+  </tbody>
+  <tfoot>
+  <tr>
+    <td colspan="5" class="text-center">
+      <div st-pagination="" st-items-by-page="itemsByPage" st-displayed-pages="7"></div>
+    </td>
+  </tr>
+  </tfoot>
+</table>

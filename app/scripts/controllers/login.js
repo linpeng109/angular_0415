@@ -20,7 +20,8 @@ angular.module('angular0415App')
       $http
         .jsonp(url, {params: params})
         .success(function (data) {
-          $scope.result = JSON.stringify(data.result);
+          console.log(JSON.stringify(data));
+          $scope.result = JSON.stringify(data);
         });
     };
   });

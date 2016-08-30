@@ -4,4 +4,8 @@
   <input type="password" ng-model="password" placeholder="password">
   <button  ng-click="passportLocalLogin()">提交</button>
 </form>
-<p>{{result}}</p>
+<p></p>
+<a href="http://192.168.0.103:3000/passportLocal/logout">logout</a>
+<p></p>
+<a href="http://192.168.0.103:3000/authentication/checkToken?token={{token}}">check</a>
+<p>{{token}}</p>

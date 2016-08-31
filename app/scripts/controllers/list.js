@@ -10,10 +10,21 @@
 angular.module('angular0415App')
   .controller('ListCtrl', function ($scope, $http) {
     $http
-      .jsonp('http://192.168.0.103:3000/list/findAll?pageSize=10&pageNum=1&callback=JSON_CALLBACK')
-      .success(function (data) {
-        $scope.users = data;
-        $scope.itemsByPage = 15;
+      .jsonp('http://192.168.0.103:3000/list/findAll?callback=JSON_CALLBACK')
+      .success(function (mydata) {
+
+        var myDefs = [
+          {field: '_id', displayName: '用户ID'},
+          {field: 'userName', displayName: '用户名'},
+          {field: 'passWord', displayName: '口令', width: '*'},
+          {field: 'department', displayName: '部门', width: '*'}];
+
+        // $scope.gridOptions = {
+        //   data: mydata
+        //   // ]
+        // };
+        $scope.mydata = mydata;
+        $scope.myDefs = myDefs;
+        // $scope.gridOptions={data:mydata,columnDefs:myDefs};
       });
   });
-

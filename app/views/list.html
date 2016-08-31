@@ -1,24 +1,6 @@
 <p>数据列表</p>
-<table st-table="rowCollection" class="table">
-  <thead>
-  <tr>
-    <th st-sort="_id">标识</th>
-    <th st-sort="userName">用户名</th>
-    <th st-sort="department">用户口令</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr st-select-row="row" st-select-mode="multiple" ng-repeat="user in users">
-    <td>{{user._id | uppercase}}</td>
-    <td>{{user.userName}}</td>
-    <td>{{user.passWord}}</td>
-  </tr>
-  </tbody>
-  <tfoot>
-  <tr>
-    <td colspan="5" class="text-center">
-      <div st-pagination="" st-items-by-page="itemsByPage" st-displayed-pages="7"></div>
-    </td>
-  </tr>
-  </tfoot>
-</table>
+<div>
+  <div id="user_grid" class="grid" ui-grid="{data:mydata,columnDefs:myDefs,paginationPageSize:10}" ui-grid-edit
+       ui-grid-pagination>
+  </div>
+</div>

@@ -17,7 +17,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.bootstrap',
-    'ui.grid','ui.grid.pagination', 'ui.grid.edit'
+    'ui.bootstrap.accordion',
+    'ui.bootstrap.modal'
   ])
   .config(function ($routeProvider) {
     $routeProvider

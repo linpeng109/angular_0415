@@ -1,0 +1,17 @@
+<table ng-table="tableParams" class="table table-bordered table-condensed table-striped table-responsive"
+       show-filter="true">
+  <tr ng-repeat="user in $data">
+    <td title="'标识'" filter="{ _id: 'text'}" sortable="'_id'">
+      <h5>{{user._id}}</h5>
+    </td>
+    <td title="'用户名'" filter="{ userName: 'text'}" sortable="'userName'">
+      <h5>{{user.userName}}</h5>
+    </td>
+    <td title="'口令'" filter="{ passWord: 'text'}">
+      <h5>{{user.passWord}}</h5>
+    </td>
+    <td title="'部门'" filter="{ department: 'text'}">
+      <h5>{{user.department}}</h5>
+    </td>
+  </tr>
+</table>

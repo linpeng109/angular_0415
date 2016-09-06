@@ -16,9 +16,11 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
+    'ngTable',
     'ui.bootstrap',
     'ui.bootstrap.accordion',
-    'ui.bootstrap.modal'
+    'ui.bootstrap.modal',
+    'angularUtils.directives.dirPagination'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -51,6 +53,11 @@ angular
         templateUrl: 'views/button.html',
         controller: 'ButtonCtrl',
         controllerAs: 'button'
+      })
+      .when('/table', {
+        templateUrl: 'views/table.html',
+        controller: 'TableCtrl',
+        controllerAs: 'table'
       })
       .otherwise({
         redirectTo: '/'

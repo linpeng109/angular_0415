@@ -32,6 +32,8 @@ module.exports = function(config) {
       'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
       'bower_components/angular-ui-grid/ui-grid.js',
       'bower_components/angular-smart-table/dist/smart-table.js',
+      'bower_components/angularUtils-pagination/dirPagination.js',
+      'bower_components/ng-table/dist/ng-table.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

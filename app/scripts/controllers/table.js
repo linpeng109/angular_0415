@@ -6,9 +6,13 @@
 'use strict';
 angular.module('angular0415App')
   .controller('TableCtrl', function ($scope, $http, NgTableParams) {
+
     $http
       .jsonp('http://192.168.0.103:3000/list/findAll?callback=JSON_CALLBACK')
       .success(function (data) {
+        //noinspection JSUnresolvedVariable
+        // this.awesomeThings = data;
+        $scope.awesomeThings = ['a','b','c'];
         $scope.tableParams = new NgTableParams({}, {dataset: data});
       });
 

@@ -1,23 +1,26 @@
+/**
+ * Created by Mars on 2016/9/7.
+ */
 'use strict';
 
-describe('Controller: ListCtrl', function () {
+describe('Controller: TableCtrl', function () {
 
   // load the controller's module
   beforeEach(module('angular0415App'));
 
-  var ListCtrl,
-    scope;
+  var TableCtrl, scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    ListCtrl = $controller('ListCtrl', {
+    TableCtrl = $controller('TableCtrl', {
       $scope: scope
       // place here mocked dependencies
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(ListCtrl.awesomeThings.length).toBe(3);
+  it('should list all users infomation', function () {
+    // console.log(scope.awesomeThings);
+    expect(scope.awesomeThings.length).toBe(3);
   });
 });
